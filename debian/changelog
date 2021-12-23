@@ -1,0 +1,5 @@
+bootscript-odroidm1 (2021.12) stable; urgency=medium
+
+  * First commit
+
+ -- odroid <odroid@focal-minimal>  Fri, 24 Dec 2021 01:24:12 +0900
