@@ -3,7 +3,7 @@
 # Copyright (C) 2021 Dongjin Kim <tobetter@gmail.com>
 #
 
-set -x
+set -e
 
 case "$1" in
 	configure)
