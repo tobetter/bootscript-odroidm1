@@ -1,0 +1,4 @@
+# MISC
+#
+setenv bootargs "${bootargs} pci=nomsi"
+setenv bootargs "${bootargs} fsck.mode=force fsck.repair=yes"
