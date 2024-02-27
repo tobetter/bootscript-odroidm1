@@ -1,0 +1,3 @@
+# Default TTY console
+setenv bootargs "${bootargs} console=tty1 console=ttyS2,1500000"
+

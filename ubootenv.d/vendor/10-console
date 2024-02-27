@@ -1,0 +1,6 @@
+# Default serial console
+setenv console "tty1"
+
+# Default TTY console
+setenv bootargs "${bootargs} earlycon=uart8250,mmio32,0xfe660000"
+

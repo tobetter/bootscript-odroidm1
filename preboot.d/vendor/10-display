@@ -1,0 +1,21 @@
+#
+# 'resolution' and 'refresh' are to select a default display resolution and its refresh
+# rate, it can be defined in '/boot/config.ini'.
+#
+#  [generic]
+#  resolution=1920x1080
+#  refresh=60
+#
+# Examples resolutions:
+#     1920x1080
+#     1024x768
+#     800x600
+#     640x480
+
+if test -n "${resolution}"; then
+  setenv refresh 60
+  if test -n "${refresh}"; then
+    setenv refresh "${refresh}"
+  fi
+  setenv bootargs "${bootargs} video=HDMI-A-1:${resolution}@${refresh}"
+fi

@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Copyright (C) 2021 Dongjin Kim <tobetter@gmail.com>
+#
+
+set -e
+
+case "$1" in
+	configure)
+		cat>/etc/fw_env.config<<__EOF
+# MTD device name	Device offset	Env. size	Flash sector size	Number of sectors
+/dev/mtd0		0x00000		0x20000		0x10000
+__EOF
+		update-bootscript || true
+		;;
+	triggered)
+		update-bootscript || true
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+		;;
+esac
+
+##DEBHELPER##
+
+exit 0
